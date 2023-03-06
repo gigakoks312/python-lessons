@@ -6,19 +6,28 @@ def GetWordsFromUser():
             words.append(word)
         else:
             return words
-words = GetWordsFromUser()
+
 def DisplayWords():
-    for word in words:
-        print(word)
-rowMax = int(input("Enter number of rows: "))
-colMax = int(input("Enter number of columns: "))
+    #for word in words:
+    print(words)
+
 def GenerateGrid():
     grid = [['-' for x in range(colMax)] for y in range(rowMax)]
     return grid
-grid = GenerateGrid()
+
 def DisplayGrid():
     for row in range(rowMax):
         for col in range(colMax):
             print (grid[row][col] + ' ', end="")
         print ()
+
+def PlaceWords(): #
+    pass
+
+
+words = GetWordsFromUser()
+DisplayWords()
+rowMax = int(input("Enter number of rows: "))
+colMax = int(input("Enter number of columns: "))
+grid = GenerateGrid()
 DisplayGrid()
